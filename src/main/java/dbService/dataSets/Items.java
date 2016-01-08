@@ -7,7 +7,7 @@ import java.io.Serializable;
 @Entity
 @Table(name = "itemsMyShop")
 public class Items implements Serializable { // Serializable Important to Hibernate!
-    private static final long serialVersionUID = -8119184405056963442L;
+    private static final long serialVersionUID = 3752359971145236280L;
 
 
     @Id
