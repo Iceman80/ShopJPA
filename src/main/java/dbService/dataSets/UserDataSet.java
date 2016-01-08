@@ -1,7 +1,10 @@
 package dbService.dataSets;
 
+import dbService.data.Users;
+import dbService.EM;
 import dbService.dao.UserDAO;
 import org.hibernate.*;
+
 import java.util.List;
 
 

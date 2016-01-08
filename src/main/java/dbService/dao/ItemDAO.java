@@ -1,7 +1,7 @@
 package dbService.dao;
 
 
-import dbService.dataSets.Items;
+import dbService.data.Items;
 import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;

@@ -1,4 +1,4 @@
-package dbService.dataSets;
+package dbService.data;
 
 import javax.persistence.*;
 import java.io.Serializable;

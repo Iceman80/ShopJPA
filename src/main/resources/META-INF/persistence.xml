@@ -7,8 +7,8 @@
     <persistence-unit name="My" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
 
-        <class>dbService.dataSets.Items</class>
-        <class>dbService.dataSets.Users</class>
+        <class>dbService.data.Items</class>
+        <class>dbService.data.Users</class>
 
         <properties>
             <property name="hibernate.connection.driver_class" value="org.postgresql.Driver"/>

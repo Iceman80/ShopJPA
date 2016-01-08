@@ -1,5 +1,7 @@
 package dbService.dataSets;
 
+import dbService.data.Items;
+import dbService.EM;
 import dbService.dao.ItemDAO;
 import org.hibernate.*;
 import java.util.List;
