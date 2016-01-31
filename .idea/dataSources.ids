@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="PostgreSQL - testdb@localhost" uuid="b022d6e9-10b9-4b32-bdc2-c6239dc70cd9">
-    <database-info product="PostgreSQL" version="9.4.5" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+    <database-info product="PostgreSQL" version="9.5.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
@@ -10,118 +10,188 @@
       <schema id="2" parent="1" name="public">
         <object-id>2200</object-id>
         <comment>standard public schema</comment>
-        <introspection-state-number>3139</introspection-state-number>
-        <introspection-timestamp>2016-01-08.21:37:13.284</introspection-timestamp>
+        <introspection-state-number>660</introspection-state-number>
+        <introspection-timestamp>2016-01-20.20:15:32.720</introspection-timestamp>
       </schema>
-      <sequence id="3" parent="2" name="hibernate_sequence">
-        <object-id>27974</object-id>
-        <state-number>3086</state-number>
+      <sequence id="3" parent="2" name="company_id_seq">
+        <object-id>16432</object-id>
+        <state-number>660</state-number>
       </sequence>
       <sequence id="4" parent="2" name="itemsmyshop_id_seq">
-        <object-id>27976</object-id>
-        <state-number>3136</state-number>
+        <object-id>16395</object-id>
+        <state-number>621</state-number>
       </sequence>
       <sequence id="5" parent="2" name="usersmyshop_idu_seq">
-        <object-id>27987</object-id>
-        <state-number>3137</state-number>
+        <object-id>16406</object-id>
+        <state-number>622</state-number>
       </sequence>
-      <table id="6" parent="2" name="itemsmyshop">
-        <object-id>27978</object-id>
-        <state-number>3136</state-number>
+      <sequence id="6" parent="2" name="userstest_id_seq">
+        <object-id>16421</object-id>
+        <state-number>657</state-number>
+      </sequence>
+      <table id="7" parent="2" name="company">
+        <object-id>16434</object-id>
+        <state-number>660</state-number>
       </table>
-      <table id="7" parent="2" name="usersmyshop">
-        <object-id>27989</object-id>
-        <state-number>3137</state-number>
+      <table id="8" parent="2" name="itemsmyshop">
+        <object-id>16397</object-id>
+        <state-number>621</state-number>
       </table>
-      <column id="8" parent="6" name="id">
-        <state-number>3136</state-number>
+      <table id="9" parent="2" name="usersmyshop">
+        <object-id>16408</object-id>
+        <state-number>622</state-number>
+      </table>
+      <table id="10" parent="2" name="userstest">
+        <object-id>16423</object-id>
+        <state-number>657</state-number>
+      </table>
+      <column id="11" parent="7" name="id">
+        <state-number>660</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;company_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="12" parent="7" name="name">
+        <state-number>660</state-number>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="13" parent="7" name="age">
+        <state-number>660</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <column id="14" parent="7" name="address">
+        <state-number>660</state-number>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="15" parent="7" name="salary">
+        <state-number>660</state-number>
+        <data-type>integer</data-type>
+      </column>
+      <index id="16" parent="7" name="company_pkey">
+        <object-id>16441</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="17" parent="7" name="company_pkey">
+        <columns>id</columns>
+        <underlying-index>company_pkey</underlying-index>
+        <primary>1</primary>
+      </key>
+      <column id="18" parent="8" name="id">
+        <state-number>621</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
         <default-expression>nextval(&apos;itemsmyshop_id_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="9" parent="6" name="description">
-        <state-number>3136</state-number>
+      <column id="19" parent="8" name="description">
+        <state-number>621</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="10" parent="6" name="measurement">
-        <state-number>3136</state-number>
+      <column id="20" parent="8" name="measurement">
+        <state-number>621</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="11" parent="6" name="price">
-        <state-number>3136</state-number>
+      <column id="21" parent="8" name="price">
+        <state-number>621</state-number>
         <data-type>double precision</data-type>
       </column>
-      <column id="12" parent="6" name="quantity">
-        <state-number>3136</state-number>
+      <column id="22" parent="8" name="quantity">
+        <state-number>621</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="13" parent="6" name="unit">
-        <state-number>3136</state-number>
+      <column id="23" parent="8" name="unit">
+        <state-number>621</state-number>
         <data-type>integer</data-type>
       </column>
-      <index id="14" parent="6" name="itemsmyshop_pkey">
-        <object-id>27985</object-id>
+      <index id="24" parent="8" name="itemsmyshop_pkey">
+        <object-id>16404</object-id>
         <columns>id</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="15" parent="6" name="uk_47bdfd15bd8c40b5b4f6bd24813">
-        <object-id>27998</object-id>
+      <index id="25" parent="8" name="uk_8c6mdgpjc6hfr7nnopc5w9scg">
+        <object-id>16417</object-id>
         <columns>quantity</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="16" parent="6" name="itemsmyshop_pkey">
+      <key id="26" parent="8" name="itemsmyshop_pkey">
         <columns>id</columns>
         <underlying-index>itemsmyshop_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <key id="17" parent="6" name="uk_47bdfd15bd8c40b5b4f6bd24813">
+      <key id="27" parent="8" name="uk_8c6mdgpjc6hfr7nnopc5w9scg">
         <columns>quantity</columns>
-        <underlying-index>uk_47bdfd15bd8c40b5b4f6bd24813</underlying-index>
+        <underlying-index>uk_8c6mdgpjc6hfr7nnopc5w9scg</underlying-index>
       </key>
-      <column id="18" parent="7" name="idu">
-        <state-number>3137</state-number>
+      <column id="28" parent="9" name="idu">
+        <state-number>622</state-number>
         <mandatory>1</mandatory>
         <data-type>bigint</data-type>
         <default-expression>nextval(&apos;usersmyshop_idu_seq&apos;::regclass)</default-expression>
       </column>
-      <column id="19" parent="7" name="adress">
-        <state-number>3137</state-number>
+      <column id="29" parent="9" name="adress">
+        <state-number>622</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="20" parent="7" name="age">
-        <state-number>3137</state-number>
+      <column id="30" parent="9" name="age">
+        <state-number>622</state-number>
         <data-type>integer</data-type>
       </column>
-      <column id="21" parent="7" name="name">
-        <state-number>3137</state-number>
+      <column id="31" parent="9" name="name">
+        <state-number>622</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <column id="22" parent="7" name="password">
-        <state-number>3137</state-number>
+      <column id="32" parent="9" name="password">
+        <state-number>622</state-number>
         <data-type>varchar(255)</data-type>
       </column>
-      <index id="23" parent="7" name="usersmyshop_pkey">
-        <object-id>27996</object-id>
+      <index id="33" parent="9" name="usersmyshop_pkey">
+        <object-id>16415</object-id>
         <columns>idu</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <index id="24" parent="7" name="uk_44f505061af847bbbc687f728c4">
-        <object-id>28000</object-id>
+      <index id="34" parent="9" name="uk_cjtmwdqkm6cx6djhjbor6su3j">
+        <object-id>16419</object-id>
         <columns>name</columns>
         <desc-columns></desc-columns>
         <unique>1</unique>
       </index>
-      <key id="25" parent="7" name="usersmyshop_pkey">
+      <key id="35" parent="9" name="usersmyshop_pkey">
         <columns>idu</columns>
         <underlying-index>usersmyshop_pkey</underlying-index>
         <primary>1</primary>
       </key>
-      <key id="26" parent="7" name="uk_44f505061af847bbbc687f728c4">
+      <key id="36" parent="9" name="uk_cjtmwdqkm6cx6djhjbor6su3j">
         <columns>name</columns>
-        <underlying-index>uk_44f505061af847bbbc687f728c4</underlying-index>
+        <underlying-index>uk_cjtmwdqkm6cx6djhjbor6su3j</underlying-index>
+      </key>
+      <column id="37" parent="10" name="id">
+        <state-number>657</state-number>
+        <mandatory>1</mandatory>
+        <data-type>integer</data-type>
+        <default-expression>nextval(&apos;userstest_id_seq&apos;::regclass)</default-expression>
+      </column>
+      <column id="38" parent="10" name="user_name">
+        <state-number>657</state-number>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="39" parent="10" name="user_password">
+        <state-number>657</state-number>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <index id="40" parent="10" name="userstest_pkey">
+        <object-id>16430</object-id>
+        <columns>id</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="41" parent="10" name="userstest_pkey">
+        <columns>id</columns>
+        <underlying-index>userstest_pkey</underlying-index>
+        <primary>1</primary>
       </key>
     </database-model>
   </data-source>

@@ -24,9 +24,17 @@
         <processorPath useClasspath="true" />
         <module name="Shop" />
       </profile>
+      <profile default="false" name="Annotation profile for ShopJPA" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="ShopJPA" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
       <module name="Shop" target="1.5" />
+      <module name="ShopJPA" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

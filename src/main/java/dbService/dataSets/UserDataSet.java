@@ -4,10 +4,11 @@ import dbService.data.Users;
 import dbService.EM;
 import dbService.dao.UserDAO;
 import org.hibernate.*;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-
+@Component
 public class UserDataSet {
 
     public long addUser(String name, String password, int age, String adress) throws DBException {

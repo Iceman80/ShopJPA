@@ -6,6 +6,7 @@ import org.hibernate.Criteria;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
@@ -15,6 +16,9 @@ public class UserDAO {
 
     public UserDAO(Session session) {
         this.session = session;
+    }
+
+    public UserDAO() {
     }
 
     public Users getUserName(String name) throws HibernateException {
